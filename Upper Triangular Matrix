@@ -1,0 +1,52 @@
+write a program to find  Upper Triangular Matrix using 2D.
+
+Sample Input:
+3
+0 0 1
+0 2 3
+0 0 5
+
+Sample Output:
+
+Upper triangular matrix
+---------------------------------------------------------------------------------------------------------------------
+import java.util.*;
+public class Upper
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int a[][]=new int[n][n];
+        for(int i=0;i<n;i++)
+        {
+            for(int j=0;j<n;j++)
+            {
+                a[i][j]=sc.nextInt();
+            }
+        }
+        int temp=0;
+        for(int i=1;i<n;i++)
+        {
+            for(int j=0;j<n;j++)
+            {
+            if(a[i][j]!=0)
+            {
+                temp=0;
+            }
+            else
+            {
+                temp=1;
+            }
+            }
+        }
+        if(temp==1)
+        {
+            System.out.println("Upper triangular matrix");
+        }
+        else
+        {
+            System.out.println("Not an Upper Triangular Matrix");
+        }
+    }
+}
